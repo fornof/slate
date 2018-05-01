@@ -2,10 +2,8 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
-  - javascript
+  - java
+  - maml
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -16,6 +14,53 @@ includes:
 
 search: true
 ---
+
+#What is Maml?
+What is Maml Pellet Feed ? 
+Pellet feed is a set of words. A word is a set of notes and beats separated by // . 
+a word can also be an actual word. 
+>type  '' Hello World '' 
+
+<aside class="warning">MAML is awesome!</aside>
+
+```Maml
+You can add beats to your notes. 
+P is a quarter note (pie)
+A is two eighths (Apple)
+H is four sixteenths (Huckleberry)
+L is 3 thirds (Lemonade)
+```
+
+(etc, see the pie game for more information)
+>type '' helloo//PAPA ''
+
+notes can also be inserted, the octaves split is on c, default octave is 3.
+
+>type '' 4cdefgab5cdefgab6c//P '' 
+
+it puts a quarter note on each of the notes. The beats are in a modulo of size, so if the beats are less than the notes, then the beat picker loops over and plays the next note in the loop.   
+
+##Beats
+Beats can be a number next to a comma or a named group of numbers:
+>type '' aaaaa//8,16,12,7 ''
+
+this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.
+
+##Rests
+rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. 
+
+>type '' 4c_defgab5c//8,4,8,4,8,4,8,4,8, ''
+
+>this rests a 8th note, and then plays the rest of the notes. It turns the notes off, but keep the beat there. 
+
+##Sharps and Flats
+Sharps are '#', flats are '@' and come before the note. '#c' is a c sharp, #c_ is a rest note. 
+
+>type cfl@t#harp//8,8,16,16, 
+
+<aside class="aside">Horah! MAML is awesome!</aside>  
+
+
 
 # Introduction
 
@@ -68,8 +113,40 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Kittens
 
 ## Get All Kittens
+What is Maml Pellet Feed ? 
+ Pellet feed is a set of words. A word is a set of notes and beats separated by // . 
 
-```ruby
+
+/// maml documentation: 
+This is a sentence. It is also a set of letters and lengths that make up a note and a beat when typed into maml. Hodge-podge notes can be played in a sort of noise this way. 
+type  '' Hello World '' 
+You can add beats to your notes. 
+P is a quarter note (pie)
+A is two eighths (Apple)
+H is four sixteenths (Huckleberry)
+L is 3 thirds (Lemonade)
+
+(etc, see the pie game for more information)
+type '' helloo//PAPA ''
+notes can also be inserted, the octaves split is on c, default octave is 3, so this works:
+type '' 4cdefgab5cdefgab6c//P '' 
+it puts a quarter note on each of the notes. The beats are in a modulo of size, so if the beats are less than the notes, then the beat picker loops over and plays the next note in the loop.   
+
+Beats: 
+Beats can be a number next to a comma or a named group of numbers:
+type '' aaaaa//8,16,12,7 ''
+this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.
+
+Rests: 
+rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. 
+``` maml   4c_defgab5c//8,4,8,4,8,4,8,4,8, ''
+this rests a 8th note, and then plays the rest of the notes. It turns the notes off, but keep the beat there. 
+
+Sharps and Flats: 
+Sharps are '#', flats are '@' and come before the note. '#c' is a c sharp, #c_ is a rest note. 
+  type cfl@t#harp//8,8,16,16, 
+
+```funkfuns
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
