@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;java&quot;,&quot;maml&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,8 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="java">java</a>
+              <a href="#" data-language-name="maml">maml</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,27 +220,41 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#what-is-maml" class="toc-h1 toc-link" data-title="what-is-maml">What is Maml?</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#beats" class="toc-h2 toc-link" data-title="beats">Beats</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#rests" class="toc-h2 toc-link" data-title="rests">Rests</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#sharps-and-flats" class="toc-h2 toc-link" data-title="sharps-and-flats">Sharps and Flats</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="kittens">Kittens</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="get-all-kittens">Get All Kittens</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="get-a-specific-kitten">Get a Specific Kitten</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -253,7 +265,60 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
+        <h1 id='what-is-maml'>What is Maml?</h1>
+<p>What is Maml Pellet Feed ? 
+Pellet feed is a set of words. A word is a set of notes and beats separated by // . 
+a word can also be an actual word. </p>
+
+<blockquote>
+<p>type  &#39;&#39; Hello World &#39;&#39; </p>
+</blockquote>
+
+<aside class="warning">MAML is awesome!</aside>
+<pre class="highlight plaintext"><code>You can add beats to your notes. 
+P is a quarter note (pie)
+A is two eighths (Apple)
+H is four sixteenths (Huckleberry)
+L is 3 thirds (Lemonade)
+</code></pre>
+<p>(etc, see the pie game for more information)</p>
+
+<blockquote>
+<p>type &#39;&#39; helloo//PAPA &#39;&#39;</p>
+</blockquote>
+
+<p>notes can also be inserted, the octaves split is on c, default octave is 3.</p>
+
+<blockquote>
+<p>type &#39;&#39; 4cdefgab5cdefgab6c//P &#39;&#39; </p>
+</blockquote>
+
+<p>it puts a quarter note on each of the notes. The beats are in a modulo of size, so if the beats are less than the notes, then the beat picker loops over and plays the next note in the loop.   </p>
+<h2 id='beats'>Beats</h2>
+<p>Beats can be a number next to a comma or a named group of numbers:</p>
+
+<blockquote>
+<p>type &#39;&#39; aaaaa//8,16,12,7 &#39;&#39;</p>
+</blockquote>
+
+<p>this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.</p>
+<h2 id='rests'>Rests</h2>
+<p>rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. </p>
+
+<blockquote>
+<p>type &#39;&#39; 4c_defgab5c//8,4,8,4,8,4,8,4,8, &#39;&#39;</p>
+
+<p>this rests a 8th note, and then plays the rest of the notes. It turns the notes off, but keep the beat there. </p>
+</blockquote>
+<h2 id='sharps-and-flats'>Sharps and Flats</h2>
+<p>Sharps are &#39;#&#39;, flats are &#39;@&#39; and come before the note. &#39;#c&#39; is a c sharp, #c_ is a rest note. </p>
+
+<blockquote>
+<p>type cfl@t#harp//8,8,16,16, </p>
+</blockquote>
+
+<aside class="aside">Horah! MAML is awesome!</aside>  
+<h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
 
 <p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
@@ -289,10 +354,42 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2>
+<p>What is Maml Pellet Feed ? 
+ Pellet feed is a set of words. A word is a set of notes and beats separated by // . </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+<p>/// maml documentation: 
+This is a sentence. It is also a set of letters and lengths that make up a note and a beat when typed into maml. Hodge-podge notes can be played in a sort of noise this way. 
+type  &#39;&#39; Hello World &#39;&#39; 
+You can add beats to your notes. 
+P is a quarter note (pie)
+A is two eighths (Apple)
+H is four sixteenths (Huckleberry)
+L is 3 thirds (Lemonade)</p>
+
+<p>(etc, see the pie game for more information)
+type &#39;&#39; helloo//PAPA &#39;&#39;
+notes can also be inserted, the octaves split is on c, default octave is 3, so this works:
+type &#39;&#39; 4cdefgab5cdefgab6c//P &#39;&#39; 
+it puts a quarter note on each of the notes. The beats are in a modulo of size, so if the beats are less than the notes, then the beat picker loops over and plays the next note in the loop.   </p>
+
+<p>Beats: 
+Beats can be a number next to a comma or a named group of numbers:
+type &#39;&#39; aaaaa//8,16,12,7 &#39;&#39;
+this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.</p>
+
+<p>Rests: 
+rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. 
+``` maml   4c_defgab5c//8,4,8,4,8,4,8,4,8, &#39;&#39;
+this rests a 8th note, and then plays the rest of the notes. It turns the notes off, but keep the beat there. </p>
+
+<p>Sharps and Flats: 
+Sharps are &#39;#&#39;, flats are &#39;@&#39; and come before the note. &#39;#c&#39; is a c sharp, #c_ is a rest note. 
+  type cfl@t#harp//8,8,16,16, </p>
+<pre class="highlight plaintext"><code>require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
@@ -433,7 +530,9 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +544,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -492,10 +591,8 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="java">java</a>
+                <a href="#" data-language-name="maml">maml</a>
           </div>
       </div>
     </div>
