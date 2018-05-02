@@ -30,9 +30,10 @@ a word can also be an actual word.
 1. Check "Use Keyboard for Input" is selected/on
 2. Play notes 
 3. Press "Save Maml Buffer" when you have a phrase.
-4. Put your word before the equals sign
+4. Put your word before the equals sign , then call it twice.
 
 > type in Maml Buffer:  myWord=abcdefg//8,8, myWord myWord
+
 5. Press "Render in Maml"
 
 ## Make a variation of Twinkle Twinkle Little Star 
