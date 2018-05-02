@@ -223,6 +223,18 @@
             <a href="#what-is-maml" class="toc-h1 toc-link" data-title="what-is-maml">What is Maml?</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#making-music-via-keyboard" class="toc-h2 toc-link" data-title="making-music-via-keyboard">Making music via keyboard</a>
+                  </li>
+                  <li>
+                    <a href="#make-words-from-keyboard" class="toc-h2 toc-link" data-title="make-words-from-keyboard">Make words from keyboard</a>
+                  </li>
+                  <li>
+                    <a href="#make-a-variation-of-twinkle-twinkle-little-star" class="toc-h2 toc-link" data-title="make-a-variation-of-twinkle-twinkle-little-star">Make a variation of Twinkle Twinkle Little Star</a>
+                  </li>
+                  <li>
+                    <a href="#for-typing-in-notes-and-beats-manually" class="toc-h2 toc-link" data-title="for-typing-in-notes-and-beats-manually">For typing in notes and beats manually</a>
+                  </li>
+                  <li>
                     <a href="#beats" class="toc-h2 toc-link" data-title="beats">Beats</a>
                   </li>
                   <li>
@@ -234,31 +246,10 @@
               </ul>
           </li>
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="kittens">Kittens</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="get-all-kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="get-a-specific-kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -266,22 +257,57 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='what-is-maml'>What is Maml?</h1>
-<p>What is Maml Pellet Feed ? 
-Pellet feed is a set of words. A word is a set of notes and beats separated by // . 
+<p>Maml is a set of letters and numbers that make it easier to interface with MIDI.
+Pellet feed is a set of words otherwise known as a Sentence. A word is a set of notes and beats separated by // and also a set of letters that can describe notes and beats . 
 a word can also be an actual word. </p>
 
 <blockquote>
 <p>type  &#39;&#39; Hello World &#39;&#39; </p>
 </blockquote>
+<h2 id='making-music-via-keyboard'>Making music via keyboard</h2>
+<ol>
+<li>Check &quot;Use Keyboard for Input&quot; is selected/on</li>
+<li>Play notes </li>
+<li>Press &quot;Save Maml Buffer&quot; when you have a phrase.</li>
+<li>Press &quot;Render in Maml&quot;</li>
+</ol>
+<h2 id='make-words-from-keyboard'>Make words from keyboard</h2>
+<ol>
+<li>Check &quot;Use Keyboard for Input&quot; is selected/on</li>
+<li>Play notes </li>
+<li>Press &quot;Save Maml Buffer&quot; when you have a phrase.</li>
+<li>Put your word before the equals sign</li>
+</ol>
+
+<blockquote>
+<p>type in Maml Buffer:  myWord=abcdefg//8,8, myWord myWord
+5. Press &quot;Render in Maml&quot;</p>
+</blockquote>
+<h2 id='make-a-variation-of-twinkle-twinkle-little-star'>Make a variation of Twinkle Twinkle Little Star</h2>
+<ol>
+<li>Turn off &quot;Use Keyboard for Input&quot;</li>
+<li>Paste twinkle code into Maml Buffer (it has a blue border)</li>
+<li>Press Render in Maml
+&gt; twinkle=4c,4c,4g,4g,4a,4a,4g,//8,8,8,8,8,8,(4,8,),
+uppa=4ggffeed//AAA(4,8,),
+HowIWonder=4f,4f,4e,4e,4d,4d,4c,//8,8_,8,8_,8,8_,(4,8,),
+twinkle HowIWonder uppa uppa twinkle HowIWonder</li>
+</ol>
 
 <aside class="warning">MAML is awesome!</aside>
-<pre class="highlight plaintext"><code>You can add beats to your notes. 
+<h2 id='for-typing-in-notes-and-beats-manually'>For typing in notes and beats manually</h2><pre class="highlight plaintext"><code>You can add beats to your notes. 
 P is a quarter note (pie)
 A is two eighths (Apple)
 H is four sixteenths (Huckleberry)
 L is 3 thirds (Lemonade)
+</code></pre><pre class="highlight plaintext"><code>You can add beats to your notes. 
+4 is a quarter note 
+8 is an eighth note
+16 is a sixteenth note
+12 is 1/3 of a triplet 
 </code></pre>
-<p>(etc, see the pie game for more information)</p>
+<p>( see the pie game for more information)
+<a href="#" title="http://www.tanglewoodmsband.org/uploads/1/7/9/6/17968915/pie_game.pdf">Pie Game</a></p>
 
 <blockquote>
 <p>type &#39;&#39; helloo//PAPA &#39;&#39;</p>
@@ -303,7 +329,7 @@ L is 3 thirds (Lemonade)
 
 <p>this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.</p>
 <h2 id='rests'>Rests</h2>
-<p>rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. </p>
+<p>rests can be on notes or beats after the note or beat. </p>
 
 <blockquote>
 <p>type &#39;&#39; 4c_defgab5c//8,4,8,4,8,4,8,4,8, &#39;&#39;</p>
@@ -317,218 +343,7 @@ L is 3 thirds (Lemonade)
 <p>type cfl@t#harp//8,8,16,16, </p>
 </blockquote>
 
-<aside class="aside">Horah! MAML is awesome!</aside>  
-<h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2>
-<p>What is Maml Pellet Feed ? 
- Pellet feed is a set of words. A word is a set of notes and beats separated by // . </p>
-
-<p>/// maml documentation: 
-This is a sentence. It is also a set of letters and lengths that make up a note and a beat when typed into maml. Hodge-podge notes can be played in a sort of noise this way. 
-type  &#39;&#39; Hello World &#39;&#39; 
-You can add beats to your notes. 
-P is a quarter note (pie)
-A is two eighths (Apple)
-H is four sixteenths (Huckleberry)
-L is 3 thirds (Lemonade)</p>
-
-<p>(etc, see the pie game for more information)
-type &#39;&#39; helloo//PAPA &#39;&#39;
-notes can also be inserted, the octaves split is on c, default octave is 3, so this works:
-type &#39;&#39; 4cdefgab5cdefgab6c//P &#39;&#39; 
-it puts a quarter note on each of the notes. The beats are in a modulo of size, so if the beats are less than the notes, then the beat picker loops over and plays the next note in the loop.   </p>
-
-<p>Beats: 
-Beats can be a number next to a comma or a named group of numbers:
-type &#39;&#39; aaaaa//8,16,12,7 &#39;&#39;
-this plays a 5 times, with an 8th, a 16th, a 12th , and a 7th note.</p>
-
-<p>Rests: 
-rests can be on notes or beats after the note or beat. They currently can only be heard when the midi is downloaded. 
-``` maml   4c_defgab5c//8,4,8,4,8,4,8,4,8, &#39;&#39;
-this rests a 8th note, and then plays the rest of the notes. It turns the notes off, but keep the beat there. </p>
-
-<p>Sharps and Flats: 
-Sharps are &#39;#&#39;, flats are &#39;@&#39; and come before the note. &#39;#c&#39; is a c sharp, #c_ is a rest note. 
-  type cfl@t#harp//8,8,16,16, </p>
-<pre class="highlight plaintext"><code>require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
+<aside class="aside">Horrah! MAML is awesome!</aside>  
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
